@@ -1,0 +1,32 @@
+{
+
+   "app": {
+   
+   "title": "RPI_IOLIB",
+   "version": "1.0.0",
+   "supplier": "Open STEMware",
+   "copyright": "bitValence",
+   "url": "https://github.com/cfs-apps/rpi_iolib",
+
+   "description": [
+      "Raspberry Pi I/O Library"
+   ],
+
+   "cfs": {
+      "cfe-type": "CFE_LIB",
+      "obj-file": "rpi_iolib",
+      "entry-symbol": "RPI_IOLIB_Init",
+      "name": "RPI_IOLIB",
+      "priority": 0,
+      "stack": 0,
+      "load_addr": 0,
+      "exception-action": 0,
+      "app-framework": "osk",
+      "tables": []
+   },
+
+   "requires": []
+  
+}}
+
+
