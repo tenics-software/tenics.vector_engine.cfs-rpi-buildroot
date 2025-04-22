@@ -354,7 +354,8 @@ uint16 PKTMGR_OutputTelemetry(void)
                                           "Unwrapping msg ID 0x%04X(%d)", CFE_SB_MsgIdToValue(MsgId),CFE_SB_MsgIdToValue(MsgId));
                         const KIT_TO_WrappedSbMsgTlm_Payload_t *SbMsgPayload = CMDMGR_PAYLOAD_PTR(&(SbBufPtr->Msg), KIT_TO_WrappedSbMsgTlm_t);
                         SendMsg = true;
-                        MsgPtr  = (CFE_MSG_Message_t *)SbMsgPayload;
+                        // MsgPtr  = (CFE_MSG_Message_t *)SbMsgPayload;
+                        MsgPtr = (CFE_MSG_Message_t *)(((uintptr_t)SbMsgPayload) & ~(sizeof(CFE_MSG_Message_t) - 1));
                      } 
                   }
 

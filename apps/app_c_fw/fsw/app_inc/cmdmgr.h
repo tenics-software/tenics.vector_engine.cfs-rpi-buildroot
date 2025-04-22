@@ -49,7 +49,10 @@
 ** } OWNER_XyzCmdMsg_t;
 */
 
-#define CMDMGR_PAYLOAD_PTR(buf_ptr, cmd_type) &((const cmd_type*)buf_ptr)->Payload
+// #define CMDMGR_PAYLOAD_PTR(buf_ptr, cmd_type) &((const cmd_type*)buf_ptr)->Payload
+#define CMDMGR_PAYLOAD_PTR(buf_ptr, cmd_type) \
+    &((const cmd_type*)(((uintptr_t)(buf_ptr)) & ~(sizeof(cmd_type) - 1)))->Payload
+
 
  
 /*
