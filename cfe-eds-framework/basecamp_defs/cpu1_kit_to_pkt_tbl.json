@@ -58,7 +58,7 @@
       "SAMPLE_APP_HK_TLM_TOPICID"         : "topic-id-43",
       "TEST_HK_TLM_TOPICID"               : "topic-id-44",
             
-      "USER_50_TOPICID": "topic-id-50",
+      "RPI_LED_STATUS_TLM_TOPICID": "topic-id-50",
       "USER_51_TOPICID": "topic-id-51",
       "USER_52_TOPICID": "topic-id-52",
       "USER_53_TOPICID": "topic-id-53",
