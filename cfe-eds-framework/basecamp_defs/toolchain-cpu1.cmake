@@ -4,13 +4,11 @@
 # Basic cross system configuration
 SET(CMAKE_SYSTEM_NAME           Linux)
 SET(CMAKE_SYSTEM_VERSION        1)
-SET(CMAKE_SYSTEM_PROCESSOR      i686)
+SET(CMAKE_SYSTEM_PROCESSOR      arm)
 
 # Specify the cross compiler executables
-# Typically these would be installed in a home directory or somewhere
-# in /opt.  However in this example the system compiler is used.
-SET(CMAKE_C_COMPILER            "/usr/bin/gcc")
-SET(CMAKE_CXX_COMPILER          "/usr/bin/g++")
+SET(CMAKE_C_COMPILER            "/full/path/to/buildroot/output/host/bin/arm-buildroot-linux-gnueabihf-gcc")
+SET(CMAKE_CXX_COMPILER          "/full/path/to/buildroot/output/host/bin/arm-buildroot-linux-gnueabihf-g++")
 
 # Configure the find commands
 SET(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM   NEVER)
