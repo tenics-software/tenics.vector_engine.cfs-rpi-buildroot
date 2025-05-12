@@ -7,8 +7,9 @@ SET(CMAKE_SYSTEM_VERSION        1)
 SET(CMAKE_SYSTEM_PROCESSOR      arm)
 
 # Specify the cross compiler executables
-SET(CMAKE_C_COMPILER            "/full/path/to/buildroot/output/host/bin/arm-buildroot-linux-gnueabihf-gcc")
-SET(CMAKE_CXX_COMPILER          "/full/path/to/buildroot/output/host/bin/arm-buildroot-linux-gnueabihf-g++")
+# Use compilers from environment variables
+set(CMAKE_C_COMPILER "$ENV{C_CC}" CACHE FILEPATH "C Compiler" FORCE)
+set(CMAKE_CXX_COMPILER "$ENV{C_CXX}" CACHE FILEPATH "C++ Compiler" FORCE)
 
 # Configure the find commands
 SET(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM   NEVER)
