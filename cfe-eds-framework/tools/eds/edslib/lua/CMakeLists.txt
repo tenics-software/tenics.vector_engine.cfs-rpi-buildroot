@@ -40,12 +40,6 @@ if(NOT LUALIB_FOUND)
       NOT CMAKE_CROSSCOMPILING AND
       NOT IS_CFS_ARCH_BUILD)
     set(EDSLIB_LUA_SEARCH_VERSION lua-5.3 lua5.3 lua-5.2 lua5.2 lua-5.1 lua5.1 lua>=5.1)
-  else ()
-    # Specify the Lua include directory from Buildroot's host environment (for cross-compiling)
-    set(LUALIB_INCLUDE_DIRS "/full/path/to/buildroot/output/host/include")
-
-    # Specify the Lua library from Buildroot's host environment (for cross-compiling)
-    set(LUALIB_LIBRARIES "/full/path/to/buildroot/output/host/lib/liblua.a")
   endif()
 
   if (EDSLIB_LUA_SEARCH_VERSION)
@@ -70,4 +64,3 @@ else (NOT LUALIB_FOUND)
     target_link_libraries(edslib_lua ${LUALIB_LIBRARIES})
 
 endif(NOT LUALIB_FOUND)
-
