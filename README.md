@@ -68,6 +68,9 @@ This must be done prior to running the Python ground system because it creates P
     . ./setvars.sh
     python3 basecamp.py
 
+### Configure IP Address for Ground System - Raspberry Pi Communication
+To enable the Ground System GUI to send commands to the Raspberry Pi running cFS, the `CFS_IP_ADDR` in the `basecamp.ini` configuration file must be updated to the IP address of the Raspberry Pi.
+
 ## Operating Python Virtual Environments  
 To stop/exit a virtual environment issue the *deactivate* directive and your command line prompt should nolonger start with (env). Each time you need to start *your_project's* virtual environment perform the following commands:
 
